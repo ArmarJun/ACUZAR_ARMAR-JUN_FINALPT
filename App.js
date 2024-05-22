@@ -18,7 +18,7 @@ const app = initializeApp(firebaseConfig);
 const SignUpScreen = ({ name, setName, email, setEmail, password, setPassword, handleSignUp, switchToSignIn }) => {
   return (
     <View style={styles.authContainer}>
-      <Text style={styles.title}>Sign Up</Text>
+      <Text style={styles.title}>Create Account</Text>
 
       <TextInput
         style={styles.input}
@@ -46,7 +46,7 @@ const SignUpScreen = ({ name, setName, email, setEmail, password, setPassword, h
       </View>
       <View style={styles.bottomContainer}>
         <Text style={styles.toggleText} onPress={switchToSignIn}>
-          Already have an account? Sign In
+          Already have an account? Login
         </Text>
       </View>
     </View>
@@ -56,7 +56,7 @@ const SignUpScreen = ({ name, setName, email, setEmail, password, setPassword, h
 const SignInScreen = ({ email, setEmail, password, setPassword, handleSignIn, switchToSignUp }) => {
   return (
     <View style={styles.authContainer}>
-      <Text style={styles.title}>Sign In</Text>
+      <Text style={styles.title}>Login</Text>
       <TextInput
         style={styles.input}
         value={email}
@@ -72,7 +72,7 @@ const SignInScreen = ({ email, setEmail, password, setPassword, handleSignIn, sw
         secureTextEntry
       />
       <View style={styles.buttonContainer}>
-        <Button title="Sign In" onPress={handleSignIn} color="#3498db" />
+        <Button title="LOGIN" onPress={handleSignIn} color="#3498db" />
       </View>
       <View style={styles.bottomContainer}>
         <Text style={styles.toggleText} onPress={switchToSignUp}>
